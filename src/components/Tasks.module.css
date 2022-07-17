@@ -1,0 +1,151 @@
+.tasksContainer {
+    max-width: 736px;
+    margin: -30px auto 0;
+  }
+  
+  .tasksHeader {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .taskInput {
+    background: var(--gray-500);
+    color: var(--gray-100);
+  
+    width: 638px;
+    height: 54px;
+    padding: 16px;
+  
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .taskContentCompleted {
+    text-decoration: line-through;
+  }
+  
+  .btnAddTask {
+    background: var(--blue-800);
+    color: var(--gray-100);
+  
+    width: 90px;
+    height: 52px;
+    padding: 16px;
+    gap: 8px;
+    border-radius: 8px;
+    border: none;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    cursor: pointer;
+  }
+  
+  .tasksInformation {
+    margin-top: 64px;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tasksInformation p:first-child {
+    color: var(--blue-500);
+  }
+  
+  .tasksInformation span {
+    background: var(--gray-500);
+    color: var(--gray-100);
+  
+    width: 25px;
+    height: 19px;
+  
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    gap: 10px;
+  
+    border-radius: 999px;
+  
+  }
+  
+  .tasksInformation p:last-child {
+    color: var(--purple-500);
+  }
+  
+  .tasksList {
+    margin-top: 24px;
+    width: 736px;
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .taskIcon {
+    margin: 64px 0 16px;
+    color: var(--gray-300);
+  }
+  
+  .tasksList p {
+    color: var(--gray-300);
+    font-weight: 700;
+  }
+  
+  .tasksList span {
+    color: var(--gray-300);
+    font-weight: 400;
+  }
+  
+  .task {
+    background: var(--gray-500);
+    width: 100%;
+    height: 72px;
+  
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 0 8px 0;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .task input {
+    width: 0;
+    height: 0;
+  }
+  
+  .taskCheckbox {
+    height: 20px;
+    width: 20px;
+    background: var(--gray-500);
+    border: 1px solid var(--blue-500);
+    border-radius: 50%;
+  }
+  
+  .taskCheckboxChecked {
+    height: 20px;
+    width: 20px;
+    background: var(--blue-800);
+    border: 1px solid var(--blue-800);
+    color: var(--gray-100);
+    border-radius: 50%;
+  }
+  
+  .taskTrashIcon {
+    color: var(--gray-300);
+  }
+  
+  .taskTrashIcon:hover {
+    color: var(--red-500);
+  }
+  
+  .taskInput {
+    background: var(--gray-500);
+    border: 2px solid var(--blue-500);
+  }

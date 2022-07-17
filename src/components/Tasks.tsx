@@ -80,8 +80,8 @@ const Tasks = (props: TasksProps) => {
           </div>
     
           <div className={styles.tasksInformation}>
-            <p>Tarefas criadas: <span>{task.length}</span></p>
-            <p>Tarefas concluídas: <span>{task.map((t) => t.isCompleted).filter((task) => task).length} de {task.length}</span></p>
+            <p>Tasks Created: <span>{task.length}</span></p>
+            <p>Tasks Completed: <span>{task.map((t) => t.isCompleted).filter((task) => task).length} de {task.length}</span></p>
           </div>
     
           <div className={styles.tasksList}>
@@ -89,8 +89,8 @@ const Tasks = (props: TasksProps) => {
               task.length < 1 ? (
                 <div>
                   <ClipboardText size={56}  className={styles.taskIcon} />
-                  <p>Você ainda não tem tarefas cadastradas</p>
-                  <span>Crie tarefas e organize seus itens a fazer</span>
+                  <p>You don't have any tasks</p>
+                  <span>Add Task and Organize your Work Flow</span>
                 </div>
               ) : (
                   displayTasks()
