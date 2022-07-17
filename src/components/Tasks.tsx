@@ -64,29 +64,41 @@ const Tasks = (props: TasksProps) => {
       }
 
 
-  return (
-    <>
-        <div>
-            <div>
-                <input placeholder='Add a task' type="text" />
-                <button onClick={handleAddTask} className={styles.btnAddTask}>Create</button>
-                <PlusCircle size={16} />
-            </div>
-        </div>
-
-        <div>
-            <p>Tarefas Criadas:<span>{task.length}</span></p>
-            <p>Tarefas Concluidas: <span>{task.map((task) => task.isCompleted).filter((task) => task).length} de {task.length}</span></p>
-        </div>
-        <div>
+      return (
+        <div className={styles.tasksContainer}>
+          <div className={styles.tasksHeader}>
+            <input
+              value={newTask}
+              onChange={(e) => handleNewTaskContent(e)}
+              className={styles.taskInput}
+              placeholder="Adicione uma nova tarefa"
+            />
+            <button onClick={handleAddTask} className={styles.btnAddTask}>
+              Criar
+              <PlusCircle size={16} />
+            </button>
+          </div>
+    
+          <div className={styles.tasksInformation}>
+            <p>Tarefas criadas: <span>{task.length}</span></p>
+            <p>Tarefas concluídas: <span>{task.map((t) => t.isCompleted).filter((task) => task).length} de {task.length}</span></p>
+          </div>
+    
+          <div className={styles.tasksList}>
             {
-                displayTasks()
+              task.length < 1 ? (
+                <div>
+                  <ClipboardText size={56}  className={styles.taskIcon} />
+                  <p>Você ainda não tem tarefas cadastradas</p>
+                  <span>Crie tarefas e organize seus itens a fazer</span>
+                </div>
+              ) : (
+                  displayTasks()
+              )
             }
+          </div>
         </div>
-    
-    </>
-    
-  )
-}
+      )
+    }
 
 export default Tasks
